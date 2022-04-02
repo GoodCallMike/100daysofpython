@@ -28,8 +28,11 @@ scissors = '''
 '''
 
 # Write your code below this line 👇
-rps_graphics = [rock, paper, scissors]
-rps_labels = ['rock', 'paper', 'scissors']
+rps_data = [
+    {'name': 'rock', 'image': rock},
+    {'name': 'paper', 'image': paper},
+    {'name': 'scissors', 'image': scissors}
+]
 
 win_message = 'You win!'
 lose_message = 'You lose!'
@@ -55,7 +58,7 @@ if player_choice < 0 or player_choice > 2:
 
 cpu_choice = random.randint(0, 2)
 
-print(f"You have chosen {rps_labels[player_choice]}: {rps_graphics[player_choice]}")
-print(f"The CPU has chosen {rps_labels[cpu_choice]}: {rps_graphics[cpu_choice]}")
+print(f"You have chosen {rps_data[player_choice]['name']}: {rps_data[player_choice]['image']}")
+print(f"The CPU has chosen {rps_data[cpu_choice]['name']}: {rps_data[cpu_choice]['image']}")
 
 print(results[player_choice][cpu_choice])
